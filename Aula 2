@@ -37,4 +37,69 @@ fac <- as.factor(fac)
 testando <- t+1
 View(testando)
 
+# Functions examples
+sin()
+integrate()
+plot()
+"+"()
+paste()
+
+# Built-int functions
+square<-function(x){return(x*x)}
+square(1:5)
+View(square(1:5))
+# Power function with two arguments
+power<-function(x,pow){return(x^pow)}
+power(1:5,3)
+View(power(1:5,3))
+
+# Careful not to asign a function to a reserved word
+
+# Exercise 
+startfunction<-function(x){(x-mean(x))/sd(x)}
+# This returns a vector where the mean is subtracted from the argument, and afterwards the deviations from the mean is scaled with the standard deviation.
+
+# Simple ploting
+rm(x,y)
+x<-seq(0,6,length=100)
+y<-2*x+3+rnorm(100)
+plot(x,y)
+plot(sin,0,2*pi)
+
+# Using source to reference the pogram on an editor 
+source("C:/guilherme/teste_R.R")
+
+# Exercise
+f <- function(x){3*sin(x/2)+x}
+f(0)
+f(-1)
+f(pi)
+curve(f,-7,7)
+
+x <- c("b", 2,  TRUE)
+View(x)
+
+y <- c(1, 2, 3.14, 4, 5)
+show(y)
+
+z <- c(FALSE, TRUE, 2, 3, 4)
+show(z)
+
+matrix(c(5,4,3,2,1,0)+2,nrow=2)<5
+
+?sin
+
+a <- 7 
+b <- 5 
+
+myfunc <- function(x=3,y=4){
+  a <- x+y 
+  b <- x-y 
+  return(a*b) 
+}
+
+plot(sin,0,2*pi)
+plot(sin,-pi,2*pi)
+plot(sin,-pi,pi)
+plot(sin,pi,3*pi)
 
