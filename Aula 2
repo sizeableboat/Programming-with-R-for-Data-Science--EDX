@@ -103,3 +103,26 @@ plot(sin,-pi,2*pi)
 plot(sin,-pi,pi)
 plot(sin,pi,3*pi)
 
+# Lab
+?cat()
+?density()
+?hist()
+?"if"
+?plot()
+?summary()
+
+my.display<-function(x){
+  cat("Summary of input:\n")
+  return(summary(x))
+  }
+my.display(x)
+
+my.display<-function(x){
+  hist(x)
+  return(hist(x))
+}
+my.display(100)
+set.seed(1234)
+my.data<-rnorm(200)
+median(my.data)
+?hist()
