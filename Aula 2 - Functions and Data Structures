@@ -9,10 +9,23 @@ matrix(c(1,2,3,4,5,6)+pi, nrow = 2)
 matrix(c(1,2,3,4,5,6)+pi, nrow = 2)<6
 # Array
 array(c(1:24),dim = c(4,3,2))
+# Dataframe - standart structures
+data.frame(treatment=c("active","active","placebo"),
+           bp=c(80,85,90))
+# Compare it to a matrix
+cbind(treatment=c("active","active","placebo"),
+           bp=c(80,85,90))
+# elements
+list(a=1,b="abc",c=c(1,2,3),d=list(e=matrix(1:4,2),f=function(x)x^2))
 
 # Exercise 2.1
 ?paste
 paste("R Strin",1)
+data.frame(numeros=c(1,2,3))
+data.frame(numeros=c(1,2,3)+2)
+data.frame(numeros=c(1,2,3),caracteres=c("a","b","c"))
+data.frame(numeros=c(1,2,3)+2,caracteres=c("a","b","c")+2)
+data.frame(x=1:3,y=c("A","B","C"))+2
 str(paste("R Strin",1))
 ?data.frame
 L3 <- LETTERS[1:3]
@@ -57,9 +70,12 @@ View(power(1:5,3))
 
 # Exercise 
 startfunction<-function(x){(x-mean(x))/sd(x)}
+my.standart<-function(x){(x-mean(x))/sd(x)}
+my.standart(c(y=1:10))
 # This returns a vector where the mean is subtracted from the argument, and afterwards the deviations from the mean is scaled with the standard deviation.
 
 # Simple ploting
+  # getting rid of the functions you have created
 rm(x,y)
 x<-seq(0,6,length=100)
 y<-2*x+3+rnorm(100)
@@ -114,7 +130,7 @@ plot(sin,pi,3*pi)
 my.display<-function(x){
   cat("Summary of input:\n")
   return(summary(x))
-  }
+}
 my.display(x)
 
 my.display<-function(x){
